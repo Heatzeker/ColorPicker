@@ -1,9 +1,18 @@
-.triangle {
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 50px solid #0000FF;
+.box {
+    width: 200px;
+    display: inline-flex;
+    background: conic-gradient(at 50% 20px, red 150deg, #0000 0 210deg, green 0) blue;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.box::before {
+    content: "";
+    padding-top: calc(86.6% -10px);
+    width: 100%;
+    box-sizing: border-box;
+    border:solid transparent;
+    border-bottom-color: gold;
+    border-width: 0 18px 10px 18px;
 }
 
 .slideContainer {
